@@ -1,0 +1,50 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+
+local Window = OrionLib:MakeWindow({Name = "voidhub FREE", HidePremium = true, SaveConfig = true, ConfigFolder = "OrionTest", IntroText = "voidhub FREE v0.1"})
+
+
+
+local Tab = Window:MakeTab({ 	Name = "Parry", 	Icon = "rbxassetid://4483345998", 	PremiumOnly = false })
+
+local Section = Tab:AddSection({ Name = "Main })
+
+
+Tab:AddToggle({
+	Name = "Main",
+	Default = false,
+	Callback = function(Value)
+		print(Value) loadstring(game:HttpGet("https://raw.githubusercontent.com/voidhubRBLX/bladeball/main/AutoParry"))() OrionLib:MakeNotification({ 	Name = "Auto Parry", 	Content = "Script For Auto Parry On!", 	Image = "rbxassetid://4483345998", 	Time = 5 })
+	end    
+})
+
+Tab:AddButton({
+	Name = "Manual Spam",
+	Callback = function()
+      loadstring(game:HttpGet('https://raw.githubusercontent.com/voidhubRBLX/manualparry/main/manual'))()
+  	end    
+})
+Tab:AddButton({
+	Name = "Manual Spam",
+	Callback = function()
+      
+
+})
+
+end
+
+
+
+local TabPL = Window:MakeTab({ 	Name = "Player", 	Icon = "rbxassetid://4483345998", 	PremiumOnly = false })
+
+local SectionPL = TabPL:AddSection({ Name = "Player"})
+
+TabPL:AddButton({
+	Name = "2024",
+	Callback = function()
+      OrionLib:MakeNotification({ 	Name = "Coming Soon!", 	Content = "2024", 	Image = "rbxassetid://4483345998", 	Time = 5 })
+	end 
+  })
+
+
+
+OrionLib:Init() 
